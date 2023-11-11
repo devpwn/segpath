@@ -63,3 +63,6 @@ Command: `cat urls.txt | go run main.go -p 2 -keep-query`
 Input: `https://example.com/path1/path2/path3?query=1`
 
 Output: `https://example.com/path1/path2?query=1`
+
+![](segpath.mov)
+
