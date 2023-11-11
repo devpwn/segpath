@@ -64,5 +64,7 @@ Input: `https://example.com/path1/path2/path3?query=1`
 
 Output: `https://example.com/path1/path2?query=1`
 
-[segpath.mov](./segpath.mov)
+- Proof
+
+https://github.com/devpwn/segpath/raw/main/segpath.mov
 
