@@ -1,5 +1,7 @@
 # URL Manipulation Tool
 
+![](sp.png)
+
 This tool is a command-line utility written in Go, designed for processing a list of URLs. It allows users to modify URLs by controlling the number of path segments and optionally keeping or removing query parameters.
 
 ## Features
