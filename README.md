@@ -66,7 +66,7 @@ Input: `https://example.com/path1/path2/path3?query=1`
 
 Output: `https://example.com/path1/path2?query=1`
 
-4. Using Processed URLs with Nuclei
+#### Using Processed URLs with Nuclei
 
 Once you have your processed URLs, you can use them as input for Nuclei. Nuclei can take a list of URLs from a file and perform scans on them.
 
@@ -81,6 +81,14 @@ nuclei -l processed_urls.txt -t <templates-directory>
 go run main.go -f urls.txt -p 1 | nuclei -t templates_paths
 ```
 
+#### Integrate with gospider or katana
+
+```bash
+gospider -S sites.txt | cut -f3 -d ']' | cut -f2 -d '-' | segpath -p 2
+```
+```bash
+cat urls.txt | katana <options> | segpath -p 3
+```
 
 - Proof
 
