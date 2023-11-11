@@ -68,3 +68,30 @@ Output: `https://example.com/path1/path2?query=1`
 
 https://github.com/devpwn/segpath/raw/main/segpath.mov
 
+```bash
+➜  segpath cat urls.txt 
+https://example.com/path1/path2
+https://example2.com/path1/path2
+https://example3.com/path3/path1/path2/pathn
+https://example1.com/path/path3/?a=1&?b=1
+https://example10.com/patha/pathb/pathc?a=1&b=1&c=1
+https://example11.com/patha/pathb?a=10#100
+➜  segpath cat urls.txt| ./segpath -p 3 -keep-query
+https://example.com/path1/path2
+https://example2.com/path1/path2
+https://example3.com/path3/path1/path2
+https://example1.com/path/path3/?a=1&?b=1
+https://example10.com/patha/pathb/pathc?a=1&b=1&c=1
+https://example11.com/patha/pathb?a=10#100
+➜  segpath cat urls.txt| ./segpath -p 3            
+https://example.com/path1/path2
+https://example2.com/path1/path2
+https://example3.com/path3/path1/path2
+https://example1.com/path/path3/
+https://example10.com/patha/pathb/pathc
+https://example11.com/patha/pathb#100
+➜  segpath 
+
+```
+
+
